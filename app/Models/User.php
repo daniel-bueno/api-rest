@@ -41,14 +41,14 @@ class User extends Model
     public static function usersPorCidade()
     {
         $query = Cidade::query();
-        $query->with('address.user');
+        $query->with('users');
         return $query->get();
     }
 
     public static function usersPorEstado()
     {
         $query = Estado::query();
-        $query->with('address.user');
+        $query->with('users');
         return $query->get();
     }
 }
